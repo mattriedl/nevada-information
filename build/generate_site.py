@@ -74,7 +74,7 @@ def fit_desc(*parts):
 
 
 def summary_html(text, limit=1200):
-    text = re.sub(r' \(\s*[^)]*?(?:listen|pronounced|;)\s*[^)]*\)', '', text or '')
+    text = re.sub(r' \((?=[^)]*(?:/|ː|listen|pronounced|;| or ))[^)]*\)', '', text or '')   # pronunciation guides, alternate names
     text = re.sub(r'\(\s*\)', '', text); text = re.sub(r'\s+([,.;])', r'\1', text)
     out, total = [], 0
     for para in [p.strip() for p in text.split('\n') if p.strip()]:
@@ -241,7 +241,7 @@ def gallery(item, name):
         if re.match(r'^[\w-]*\d{5,}', cap): cap = f'{name}, Nevada'
         credit = e(p.get('artist') or 'Wikimedia Commons') + (f', {e(p["license"])}' if p.get('license') else '')
         figs.append(f'<figure><img src="{e(p["src"])}" alt="{e(cap if name.lower() in cap.lower() else cap + " in " + name + ", Nevada")}" '
-                    f'loading="lazy" width="960" height="640"><figcaption>{e(cap)}<small>Photo: {credit} &middot; {a_ext(p["page"], "source")}</small></figcaption></figure>')
+                    f'loading="lazy" width="960" height="640"><figcaption>{e(cap)}<small>Photo: {credit}, {a_ext(p["page"], "source")}</small></figcaption></figure>')
     return f'<h2 id="photos">{e(name)} in pictures</h2><div class="gallery">{"".join(figs)}</div>'
 
 
@@ -253,7 +253,7 @@ WX_JS = ("<script>(function(){var c={0:'Clear',1:'Mostly clear',2:'Partly cloudy
          "fetch('https://api.open-meteo.com/v1/forecast?latitude='+p[0]+'&longitude='+p[1]+'&current=temperature_2m,weather_code,wind_speed_10m,relative_humidity_2m"
          "&daily=temperature_2m_max,temperature_2m_min,weather_code&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone='+encodeURIComponent(p[2])+'&forecast_days=7')"
          ".then(function(r){return r.json()}).then(function(d){var k=d.current,y=d.daily,days=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];"
-         "var h='<p class=\"wx-now\"><b>'+Math.round(k.temperature_2m)+'&deg;F</b> '+(c[k.weather_code]||'')+'<span>Wind '+Math.round(k.wind_speed_10m)+' mph &middot; Humidity '+Math.round(k.relative_humidity_2m)+'%</span></p><ol class=\"wx-days\">';"
+         "var h='<p class=\"wx-now\"><b>'+Math.round(k.temperature_2m)+'&deg;F</b> '+(c[k.weather_code]||'')+'<span>Wind '+Math.round(k.wind_speed_10m)+' mph, humidity '+Math.round(k.relative_humidity_2m)+'%</span></p><ol class=\"wx-days\">';"
          "for(var i=1;i<7;i++){var t=new Date(y.time[i]+'T12:00:00');h+='<li><b>'+days[t.getDay()]+'</b><span>'+Math.round(y.temperature_2m_max[i])+'&deg; / '+Math.round(y.temperature_2m_min[i])+'&deg;</span><small>'+(c[y.weather_code[i]]||'')+'</small></li>'}"
          "el.innerHTML=h+'</ol><p class=\"src\">Forecast from <a href=\"https://open-meteo.com/\" target=\"_blank\" rel=\"noopener\">Open-Meteo</a>, loaded when you open this page.</p>'})"
          ".catch(function(){el.innerHTML='<p>Forecast unavailable right now. Try <a href=\"https://forecast.weather.gov/\">weather.gov</a>.</p>'})})})();</script>")
@@ -331,7 +331,7 @@ def place_faq(p, near):
     nm, cty = p['name'], p['county']; reg = REGION_OF[cty]; fq = []
     pop = n(p['pop2020'])
     a = f"{nm} had {pop} residents at the 2020 U.S. Census"
-    if p.get('pop2010'): a += f" ({'up' if p['pop2020'] >= p['pop2010'] else 'down'} from {n(p['pop2010'])} in 2010)"
+    if p.get('pop2010') and p['type'] == 'city': a += f" ({'up' if p['pop2020'] >= p['pop2010'] else 'down'} from {n(p['pop2010'])} in 2010)"
     a += '.'
     if p.get('est2024'): a += f" The Census Bureau estimated {n(p['est2024'])} residents in mid-2024."
     fq.append((f'What is the population of {nm}, Nevada?', a, None))
@@ -391,7 +391,7 @@ def place_page(p):
     rows = [('County', county_link(cty) if cty != 'Carson City' else 'Independent city (county-equivalent)'),
             ('Region', region_link(reg)), ('Type', e(place_kind(p)).capitalize()), ('Population (2020 Census)', pop)]
     if p.get('est2024'): rows.append(('Population estimate (2024)', n(p['est2024'])))
-    if p.get('pop2010'): rows.append(('Population (2010 Census)', f"{n(p['pop2010'])} ({e(p['change'])} by 2020)"))
+    if p.get('pop2010') and p['type'] == 'city': rows.append(('Population (2010 Census)', f"{n(p['pop2010'])} ({e(p['change'])} by 2020)"))
     rows.append(('Land area', f"{p['land_sqmi']:,.1f} sq mi"))
     if p['land_sqmi'] > 0: rows.append(('Density', f"{p['pop2020'] / p['land_sqmi']:,.0f} people per sq mi"))
     if p.get('elev_ft'): rows.append(('Elevation', f"{n(p['elev_ft'])} ft"))
