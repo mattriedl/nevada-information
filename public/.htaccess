@@ -1,0 +1,21 @@
+# Nevada Information - Apache config (for the VPS). Cloudflare Pages uses _headers / _redirects instead.
+Options -Indexes
+ErrorDocument 404 /404.html
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# one hop to https://nevadainformation.com/...
+RewriteCond %{HTTP_HOST} ^www\. [NC,OR]
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://nevadainformation.com/$1 [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+(.*?/)?index\.html[\s?]
+RewriteRule ^ /%1 [R=301,L,NE]
+</IfModule>
+<IfModule mod_headers.c>
+Header set Cache-Control "public, max-age=600, no-transform"
+<FilesMatch "\.(css|svg|png|jpg|ico|woff2)$">
+Header set Cache-Control "public, max-age=2592000"
+</FilesMatch>
+Header set X-Content-Type-Options "nosniff"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
