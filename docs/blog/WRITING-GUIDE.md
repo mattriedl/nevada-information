@@ -30,9 +30,11 @@ Budget about 150-400 credits per article. Never start a batch over 2,000 credits
 5. **4-9 secondary keywords**: long-tail variations and questions; they become H2/H3 headings and FAQs.
 6. Record the choice in `docs/blog/topics.md` (move the row from Backlog to Published) and log it in OpenSEO with
    `update_project_context` → `appendResearchLog` (topic, primary keyword, volume/KD, credits used).
-7. Save the primary and every secondary keyword to the project's saved keywords with OpenSEO `save_keywords`,
-   passing each keyword's `searchVolume` and `keywordDifficulty` from `get_keyword_metrics` (no tags). Every keyword the
-   site targets is kept there so rankings can be tracked later.
+7. Save the primary and every secondary keyword to the project's saved keywords with OpenSEO `save_keywords`
+   (no tags). `save_keywords` uses no credits. Pass `searchVolume` and `keywordDifficulty` only from the
+   `get_keyword_metrics` / `research_keywords` results you already have from step 3; never make an extra paid call
+   just to fill them in. A keyword without metrics is saved without them. Every keyword the site targets is kept
+   there so rankings can be tracked later.
 
 ## 2. Research the facts
 
