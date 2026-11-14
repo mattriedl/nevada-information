@@ -9,12 +9,12 @@ guide can win. Re-check metrics and the live SERP before writing (WRITING-GUIDE.
 | Date | Slug | Primary keyword |
 |---|---|---|
 | 2026-11-14 | christmas-in-las-vegas | christmas in las vegas (3,600 / 5); also targets cowboy christmas las vegas (12,100 / 0), glittering lights las vegas (6,600 / 0), ice skating las vegas (6,600 / 0), magical forest las vegas (2,400 / 2), christmas lights in las vegas (2,900 / 0-2), restaurants open christmas day in las vegas (720 / 0), las vegas christmas weather (590 / 0), is vegas cold in december (390 / 0) |
+| 2026-11-14 | christmas-in-reno | christmas in reno (260 / 0); also targets ice skating reno (1,600 / 0), christmas lights in reno (590 / 0), reno christmas events (260 / 0), nutcracker reno (260 / 0-1), polar express virginia city (210 / 14), virginia city christmas train (140 / 10), hidden valley reno christmas lights (140 / 0), sparks christmas parade (140 / 0), reno weather december (320 / 0) |
 
 ## Backlog (top = next; seasonal items first while their window is open)
 
 | Window | Working slug | Primary keyword (vol / KD) | Long tails to cover (vol / KD) |
 |---|---|---|---|
-| Nov-Dec | christmas-in-reno | research first: christmas in reno / reno christmas events | things to do in reno nevada in december (70 / 0), things to do in reno december (70 / 0); Reno-Sparks lights, Virginia City, Lake Tahoe; link christmas-in-las-vegas |
 | Nov-Feb | nevada-hot-springs | nevada hot springs (2,900 / 0) | carson city hot springs (3,600 / 0-11), hot springs near las vegas (2,400 / 0), spencer hot springs (2,400 / 0), hot springs in nevada (1,900 / 0), hot springs las vegas (1,300 / 0), walley's / genoa hot springs (880 / 0), steamboat hot springs reno (590 / 8), hot springs near reno (590 / 9) |
 | Dec-Feb | las-vegas-in-december | las vegas in december (1,600 / 0) | events in vegas december (720), new year's eve las vegas (research), las vegas weather december; link christmas post |
 | Any time | things-to-do-in-reno | things to do in reno (22,200 / 7) | things to do in reno nevada (22,200 / 7), fun things to do in reno (2,900 / 12), things to do in reno for families (2,900 / 6), free things to do in reno (390 / 0), things to do in downtown reno (260 / 7), indoor things to do in reno (170 / 12); link /cities/reno/ |
@@ -38,5 +38,6 @@ guide can win. Re-check metrics and the live SERP before writing (WRITING-GUIDE.
 
 ## Ideas parked (need research first)
 - Lake Tahoe skiing from Reno (skiing near reno, mt rose, diamond peak)
+- Reno winter weather guide for movers: does it snow in reno (1,300 / 1); christmas-in-reno already covers December weather and ice skating
 - Extraterrestrial Highway and Area 51 road trip; US 50 "Loneliest Road" trip
 - Nevada vs California taxes; Nevada DMV for new residents; Henderson vs Summerlin
