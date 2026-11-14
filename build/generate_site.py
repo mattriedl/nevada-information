@@ -17,6 +17,9 @@ OUT = os.path.join(ROOT, 'public')
 sys.path.insert(0, HERE)
 from content import REGIONS, REGION_OF, ELECTRIC_COUNTY, ELECTRIC_PLACE, NV_ENERGY, GAS_NORTH_NVE, SCHOOL_DISTRICTS, TRANSIT, L, STATE_LINKS, CUSTOM  # noqa: E402
 import pages  # noqa: E402  hand-written long-form pages (home, moving, visiting, Nevada facts)
+import blog  # noqa: E402  blog articles, index and cross-links
+ARTS = blog.load()
+CITY_POSTS = blog.city_posts(ARTS)
 
 BASE_URL = 'https://nevadainformation.com'
 SITE_NAME = 'Nevada Information'
@@ -188,7 +191,7 @@ def head(title, desc, path, og_type='website', image=None, ld_objs=(), noindex=F
 
 
 NAV = [('Moving', '/moving-to-nevada/'), ('Visiting', '/visit-nevada/'), ('Regions', '/regions/'),
-       ('Counties', '/counties/'), ('Cities &amp; towns', '/cities/')]
+       ('Counties', '/counties/'), ('Cities &amp; towns', '/cities/'), ('Blog', '/blog/')]
 
 
 def header(active=''):
@@ -201,7 +204,7 @@ def header(active=''):
 def footer(note=''):
     return (f'<footer class="ft"><div class="wrap"><nav aria-label="Footer"><a href="/nevada/">Nevada facts</a><a href="/regions/">Regions</a>'
             f'<a href="/counties/">Counties</a><a href="/cities/">Cities &amp; towns</a><a href="/nevada-zip-codes/">ZIP codes</a>'
-            f'<a href="/nevada-area-codes/">Area codes</a><a href="/about/">About</a><a href="/contact/">Contact</a>'
+            f'<a href="/nevada-area-codes/">Area codes</a><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/">Contact</a>'
             f'<a href="/privacy/">Privacy</a><a href="/advertise/">Advertise</a></nav>'
             f'<p>&copy; {YEAR} Nevada Information. An independent guide, not affiliated with the State of Nevada.{note}</p></div></footer>'
             + WX_JS + '</body></html>')
@@ -469,6 +472,7 @@ def place_page(p):
             + f'<div class="body"><h2 id="about">About {e(nm)}</h2><div class="prose">{about}</div>'
             + f'<h2 id="facts">Quick facts</h2><div class="facts"><table>{facts}</table>{locator_map(p["lat"], p["lon"], nm, cty)}</div>'
             + weather(nm, p['lat'], p['lon'], tzs[0]) + gallery(p, nm) + attractions + moving
+            + (f'<h2 id="guides">{e(nm)} in our guides</h2>' + blog.cards(CITY_POSTS[slug(nm)][:4], e) if CITY_POSTS.get(slug(nm)) else '')
             + f'<h2 id="nearby">Towns near {e(nm)}</h2><ul class="near">{near_html}</ul>'
             + faq_html + f'<h2 id="links">Official links</h2>{links}</div></main>'
             + footer(' Population: U.S. Census Bureau. Schools: NCES Common Core of Data.'))
@@ -715,11 +719,13 @@ def main():
         write(path, html_); urls.append(path)
     ctx = dict(PLACES=PLACES, COUNTIES=COUNTIES, COUNTY=COUNTY, RANKED=RANKED, REGIONS=REGIONS, REGION_OF=REGION_OF, STATE_POP2020=STATE_POP2020,
                head=head, header=header, footer=footer, hero=hero, crumbs_ld=crumbs_ld, faq_block=faq_block, toc_html=toc_html, county_map=county_map,
-               fit_desc=fit_desc, e=e, n=n, slug=slug, a_ext=a_ext, county_label=county_label, L=L, BASE_URL=BASE_URL)
+               fit_desc=fit_desc, e=e, n=n, slug=slug, a_ext=a_ext, county_label=county_label, L=L, BASE_URL=BASE_URL, ARTS=ARTS, blog_block=lambda arts, title, k=4: blog.block(arts, title, e, k))
     put('/', pages.home(ctx))
     put('/nevada/', pages.nevada(ctx))
     put('/moving-to-nevada/', pages.moving(ctx))
     put('/visit-nevada/', pages.visiting(ctx))
+    put('/blog/', blog.index_page(ARTS, ctx))
+    for a in ARTS: put(f'/blog/{a["slug"]}/', blog.article_page(a, ARTS, ctx))
     put('/regions/', regions_index())
     for r in REGIONS: put(f'/regions/{REGIONS[r]["slug"]}/', region_page(r))
     put('/counties/', counties_index())

@@ -39,6 +39,7 @@ def home(c):
             + '<section><h3><a href="/visit-nevada/">Visiting Nevada</a></h3><p>Red Rock and Valley of Fire, Lake Tahoe, Great Basin National Park and the long roads between them.</p></section>'
             + '<section><h3><a href="/nevada/">Nevada facts</a></h3><p>Statehood, geography, population, state symbols, time zones and area codes.</p></section></div>'
             + f'<h2>Six regions</h2><div class="split">{c["county_map"]()}<ul class="regions">{regions}</ul></div>'
+            + c['blog_block'](c['ARTS'], 'Latest from the blog', 3)
             + f'<h2>Largest cities and towns</h2><ul class="near">{big}</ul><p><a href="/cities/">See all {len(c["PLACES"])} cities and towns</a> or <a href="/counties/">browse by county</a>.</p>'
             + '</main>' + js + c['footer'](' Population: U.S. Census Bureau.'))
 
@@ -124,6 +125,7 @@ def moving(c):
             + 'Natural gas comes from Southwest Gas in most of the state and NV Energy in the Reno area; many rural homes use propane. Each <a href="/cities/">city and town page</a> lists the providers for that area.</p>'
             + '<p>Southern Nevada gets about 90 percent of its water from the Colorado River through Lake Mead, and outdoor watering is restricted by season. Ask your water provider about landscaping rules before you plant a lawn.</p>'
             + f'<h2 id="schools">Schools</h2><p>Nevada has one public school district per county, so the Clark County School District serves all of the Las Vegas Valley and the Washoe County School District serves Reno, Sparks and Incline Village. Charter schools, many sponsored by the State Public Charter School Authority, are another option. Search schools by address with the {a(L["nces"], "NCES school search")} or the {a(L["nde"], "Nevada Department of Education")}.</p>'
+            + c['blog_block']([x for x in c['ARTS'] if x['cta'] == 'moving'], 'More guides for moving to Nevada')
             + faq_html + _src(c, [('Nevada DMV: new residents', L['dmv_new']), ('Nevada Department of Taxation', L['tax']), ('Nevada Secretary of State: elections', L['sos_elections']),
                                   ('Southern Nevada Water Authority: water resources', 'https://www.snwa.com/'), ('U.S. Census Bureau: 2020 Census', 'https://www.census.gov/')]) + '</div>')
     desc = c['fit_desc']('Moving to Nevada: the 30-day DMV deadline, no state income tax, sales and property tax, utilities, schools, climate and how to choose a town.', 'A practical checklist.')
@@ -160,6 +162,7 @@ def visiting(c):
             + '<li>Fill up whenever you can on rural highways; stretches of US 50, US 6 and US 95 run 100 miles or more without services.</li>'
             + '<li>Carry extra water, and do not rely on phone navigation alone in areas with no cell signal.</li>'
             + f'<li>Watch for open-range cattle and wildlife at night. Find more ideas at {a(L["travel"], "Travel Nevada")} and {a(L["parks"], "Nevada State Parks")}.</li></ul>'
+            + c['blog_block']([x for x in c['ARTS'] if x['cta'] == 'visiting'], 'Nevada travel guides from our blog')
             + faq_html + _src(c, [('Nevada State Parks', L['parks']), ('National Park Service: Great Basin', 'https://www.nps.gov/grba/'), ('Bureau of Land Management: Red Rock Canyon', 'https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon'),
                                   ('Nevada Department of Transportation: NVRoads', L['nvroads'])]) + '</div>')
     desc = c['fit_desc']('Visiting Nevada: Red Rock Canyon, Valley of Fire, Lake Tahoe, Virginia City, Great Basin National Park and US 50, plus when to go and road-trip tips.', 'Plan your trip.')
