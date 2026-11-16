@@ -10,12 +10,12 @@ guide can win. Re-check metrics and the live SERP before writing (WRITING-GUIDE.
 |---|---|---|
 | 2026-11-14 | christmas-in-las-vegas | christmas in las vegas (3,600 / 5); also targets cowboy christmas las vegas (12,100 / 0), glittering lights las vegas (6,600 / 0), ice skating las vegas (6,600 / 0), magical forest las vegas (2,400 / 2), christmas lights in las vegas (2,900 / 0-2), restaurants open christmas day in las vegas (720 / 0), las vegas christmas weather (590 / 0), is vegas cold in december (390 / 0) |
 | 2026-11-14 | christmas-in-reno | christmas in reno (260 / 0); also targets ice skating reno (1,600 / 0), christmas lights in reno (590 / 0), reno christmas events (260 / 0), nutcracker reno (260 / 0-1), polar express virginia city (210 / 14), virginia city christmas train (140 / 10), hidden valley reno christmas lights (140 / 0), sparks christmas parade (140 / 0), reno weather december (320 / 0) |
+| 2026-11-16 | nevada-hot-springs | nevada hot springs (2,900 / 0); also targets carson hot springs (18,100 / 2), carson city hot springs (3,600 / 0), spencer hot springs (2,900 / 0), hot springs in nevada (1,900 / 0), hot springs near las vegas (1,900 / 0), gold strike hot springs (1,900 / 12), david walley's hot springs (1,300 / 0), hot springs near reno (590 / 9), nevada hot springs map (390 / 0) |
 
 ## Backlog (top = next; seasonal items first while their window is open)
 
 | Window | Working slug | Primary keyword (vol / KD) | Long tails to cover (vol / KD) |
 |---|---|---|---|
-| Nov-Feb | nevada-hot-springs | nevada hot springs (2,900 / 0) | carson city hot springs (3,600 / 0-11), hot springs near las vegas (2,400 / 0), spencer hot springs (2,400 / 0), hot springs in nevada (1,900 / 0), hot springs las vegas (1,300 / 0), walley's / genoa hot springs (880 / 0), steamboat hot springs reno (590 / 8), hot springs near reno (590 / 9) |
 | Dec-Feb | las-vegas-in-december | las vegas in december (1,600 / 0) | events in vegas december (720), new year's eve las vegas (research), las vegas weather december; link christmas post |
 | Any time | things-to-do-in-reno | things to do in reno (22,200 / 7) | things to do in reno nevada (22,200 / 7), fun things to do in reno (2,900 / 12), things to do in reno for families (2,900 / 6), free things to do in reno (390 / 0), things to do in downtown reno (260 / 7), indoor things to do in reno (170 / 12); link /cities/reno/ |
 | Any time | things-to-do-in-laughlin | things to do in laughlin nevada (5,400 / 0) | fun things to do in laughlin (210 / 0); link /cities/laughlin/ |
@@ -37,6 +37,8 @@ guide can win. Re-check metrics and the live SERP before writing (WRITING-GUIDE.
 | Summer (publish by May 1) | (research in April) | lake tahoe nevada beaches / great basin national park / camping in nevada | run research_keywords in April |
 
 ## Ideas parked (need research first)
+- Lake Mead hot springs by kayak / Black Canyon water trail: arizona hot springs (4,400 / 2), gold strike hot springs (1,900 / 12); Steamboat Hot Springs Reno spa guide: steamboat hot springs (4,400 / 40, mixed with Colorado intent)
+- Remote Nevada hot springs road trip: bog hot springs nevada (480 / 0), ruby valley hot springs nevada (320 / 0), kyle hot springs nevada (260 / 0), alkali hot springs nevada (260 / 0), caliente hot springs nevada (210 / 0)
 - Lake Tahoe skiing from Reno (skiing near reno, mt rose, diamond peak)
 - Reno winter weather guide for movers: does it snow in reno (1,300 / 1); christmas-in-reno already covers December weather and ice skating
 - Extraterrestrial Highway and Area 51 road trip; US 50 "Loneliest Road" trip
