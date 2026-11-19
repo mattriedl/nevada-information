@@ -744,6 +744,7 @@ def main():
     write('/sitemap.xml', sm)
     write('/robots.txt', f'User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n')
     write('/.htaccess', HTACCESS)
+    write('/.assetsignore', '.htaccess\n')   # Cloudflare: don't serve the Apache config
     write('/_headers', HEADERS)
     write(f'/{INDEXNOW_KEY}.txt', INDEXNOW_KEY)
     print(f'Built {len(urls)} pages into public/ ({len(PLACES)} cities and towns, {len(COUNTIES)} counties, {len(REGIONS)} regions).')
