@@ -13,12 +13,12 @@ guide can win. Re-check metrics and the live SERP before writing (WRITING-GUIDE.
 | 2026-11-16 | nevada-hot-springs | nevada hot springs (2,900 / 0); also targets carson hot springs (18,100 / 2), carson city hot springs (3,600 / 0), spencer hot springs (2,900 / 0), hot springs in nevada (1,900 / 0), hot springs near las vegas (1,900 / 0), gold strike hot springs (1,900 / 12), david walley's hot springs (1,300 / 0), hot springs near reno (590 / 9), nevada hot springs map (390 / 0) |
 | 2026-11-16 | new-years-eve-las-vegas | new years eve las vegas (4,400 / 12); also targets las vegas new years eve events (1,900 / 13), las vegas new years eve concerts (720 / 0), las vegas strip new years eve (390 / 2), las vegas hotel new years eve (390 / 7), las vegas new years eve weather (320 / 2), las vegas new years eve dinner (210 / 0), las vegas new years eve parties (170 / 6), las vegas new years eve road closures (70 / 16) |
 | 2026-11-16 | las-vegas-in-december | las vegas in december (1,600 / 0); also targets las vegas nevada weather in december (12,100 / 0), las vegas concerts in december (1,900 / 7), las vegas december events (720 / 8), las vegas activities in december (720 / 0), things to do in december in las vegas (480 / 0), what to wear to las vegas in december (320 / 0), rodeo in las vegas in december (320 / 14), are las vegas pools open in december (90 / 0) |
+| 2026-11-19 | new-years-eve-reno | new year's eve in reno / reno new years eve (480 / 0); also targets lake tahoe new years eve (590 / 0), new years in reno (480 / 0), south lake tahoe new years eve (210 / 16), reno nv new years eve events (170 / 0), new years eve party reno (30 / 0), downtown reno new years eve (10), new years eve dinner reno (10 / 0) |
 
 ## Backlog (top = next; seasonal items first while their window is open)
 
 | Window | Working slug | Primary keyword (vol / KD) | Long tails to cover (vol / KD) |
 |---|---|---|---|
-| Dec (publish by Dec 10) | new-years-eve-reno | reno new years eve (480 / 0) | new years eve reno (480 / 0); downtown Reno fireworks, Tahoe/Stateline parties; link christmas-in-reno |
 | Any time | things-to-do-in-reno | things to do in reno (22,200 / 7) | things to do in reno nevada (22,200 / 7), fun things to do in reno (2,900 / 12), things to do in reno for families (2,900 / 6), free things to do in reno (390 / 0), things to do in downtown reno (260 / 7), indoor things to do in reno (170 / 12); link /cities/reno/ |
 | Any time | things-to-do-in-laughlin | things to do in laughlin nevada (5,400 / 0) | fun things to do in laughlin (210 / 0); link /cities/laughlin/ |
 | Any time | free-things-to-do-in-las-vegas | free things to do in las vegas nevada (5,400 / 0) | link /cities/las-vegas/, /cities/paradise/ |
@@ -39,6 +39,7 @@ guide can win. Re-check metrics and the live SERP before writing (WRITING-GUIDE.
 | Summer (publish by May 1) | (research in April) | lake tahoe nevada beaches / great basin national park / camping in nevada | run research_keywords in April |
 
 ## Ideas parked (need research first)
+- Reno winter/January: reno weather january (260 / 0); First Day Hikes at Nevada state parks (Jan. 1)
 - Enchant Las Vegas: enchant las vegas (14,800 / 30), enchant christmas las vegas (2,900 / 31); christmas-in-las-vegas covers it briefly; las vegas christmas events (1,300 / 14), las vegas christmas market (320 / 22)
 - Lake Mead hot springs by kayak / Black Canyon water trail: arizona hot springs (4,400 / 2), gold strike hot springs (1,900 / 12); Steamboat Hot Springs Reno spa guide: steamboat hot springs (4,400 / 40, mixed with Colorado intent)
 - Remote Nevada hot springs road trip: bog hot springs nevada (480 / 0), ruby valley hot springs nevada (320 / 0), kyle hot springs nevada (260 / 0), alkali hot springs nevada (260 / 0), caliente hot springs nevada (210 / 0)
