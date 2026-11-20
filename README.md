@@ -41,4 +41,4 @@ on changes to the fetch/assemble scripts, or by hand from the Actions tab, then 
 
 - Create a GA4 property and set `ANALYTICS_ID` in `build/generate_site.py`.
 - Set up email for `contact@nevadainformation.com`.
-- Submit the sitemap to Search Console and Bing; IndexNow key file is `public/7f3c2a9e5b1d4c8fa0e6b2d9c4f1a7e3.txt`.
+- Submit the sitemap to Search Console and Bing; IndexNow key file is `public/60953573236b4171a9f01357b86ed4ba.txt`.

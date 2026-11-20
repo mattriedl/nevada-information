@@ -25,7 +25,7 @@ BASE_URL = 'https://nevadainformation.com'
 SITE_NAME = 'Nevada Information'
 CONTACT_EMAIL = 'contact@nevadainformation.com'
 ANALYTICS_ID = ''          # set to the GA4 measurement ID (G-XXXXXXX) once the property exists
-INDEXNOW_KEY = '7f3c2a9e5b1d4c8fa0e6b2d9c4f1a7e3'
+INDEXNOW_KEY = '60953573236b4171a9f01357b86ed4ba'   # OpenSEO project key (submit_indexnow_urls)
 YEAR = date.today().year
 TODAY = date.today().isoformat()
 
