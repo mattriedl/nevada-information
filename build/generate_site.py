@@ -24,7 +24,10 @@ CITY_POSTS = blog.city_posts(ARTS)
 BASE_URL = 'https://nevadainformation.com'
 SITE_NAME = 'Nevada Information'
 CONTACT_EMAIL = 'contact@nevadainformation.com'
-ANALYTICS_ID = ''          # set to the GA4 measurement ID (G-XXXXXXX) once the property exists
+ANALYTICS_ID = 'G-BY7DL751LC'   # GA4 property, configured inside the Tag Manager container below
+GTM_ID       = 'GTM-WXHKSB2J'   # Google Tag Manager container (loads GA4 G-BY7DL751LC); snippet as supplied by Matt
+GTM_HEAD     = (f'<script async src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}"></script>'
+                '<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag(\'js\', new Date());</script>')
 INDEXNOW_KEY = '60953573236b4171a9f01357b86ed4ba'   # OpenSEO project key (submit_indexnow_urls)
 YEAR = date.today().year
 TODAY = date.today().isoformat()
@@ -174,8 +177,7 @@ CSS = open(os.path.join(HERE, 'site.css'), encoding='utf-8').read()
 
 def head(title, desc, path, og_type='website', image=None, ld_objs=(), noindex=False):
     url = BASE_URL + path
-    ga = (f'<script async src="https://www.googletagmanager.com/gtag/js?id={ANALYTICS_ID}"></script><script>window.dataLayer=window.dataLayer||[];'
-          f'function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","{ANALYTICS_ID}");</script>') if ANALYTICS_ID else ''
+    ga = GTM_HEAD   # Tag Manager sends the GA4 page view; no separate gtag config, so visits aren't counted twice
     lds = ''.join(f'<script type="application/ld+json">{json.dumps(o, ensure_ascii=False)}</script>' for o in ld_objs)
     img = image or f'{BASE_URL}/assets/og-image.png'
     return (f'<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
@@ -653,10 +655,10 @@ CONTACT = f'''<p>Questions, corrections and suggestions about any Nevada city, c
 <p>When reporting a correction, include the page address and, if you can, a source for the right information.</p>'''
 ADVERTISE = f'''<p>Nevada Information reaches people researching a move to Nevada or planning a trip, town by town. Banner placements and sponsorships are available on city, county, region and guide pages.</p>
 <p>Email <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a> with the area and audience you want to reach.</p>'''
-PRIVACY = f'''<p><em>Last updated: November 14, 2026</em></p>
+PRIVACY = f'''<p><em>Last updated: November 20, 2026</em></p>
 <h2>Information we collect</h2><p>This site has no accounts or sign-up forms. If you email us, we keep your message and address only to reply.</p>
 <h2>Weather and fonts</h2><p>City pages request a forecast from Open-Meteo using the town's coordinates, not your location. Fonts load from Google Fonts, which receives your IP address as part of the request.</p>
-<h2>Analytics</h2><p>We may use Google Analytics to count visits and see which pages are useful. It sets cookies and collects data such as your browser, approximate location and the pages you view. You can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out add-on</a> or by blocking cookies.</p>
+<h2>Analytics</h2><p>We use Google Analytics, loaded through Google Tag Manager, to count visits and see which pages are useful. It sets cookies and collects data such as your browser, approximate location and the pages you view. You can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out add-on</a> or by blocking cookies.</p>
 <h2>Advertising</h2><p>If we show ads, advertisers or ad networks may use cookies to measure them. We do not sell personal information.</p>
 <h2>Children</h2><p>This site is not directed at children under 13, and we do not knowingly collect their information.</p>
 <h2>Contact</h2><p>Questions about this policy: <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>.</p>'''
