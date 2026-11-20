@@ -121,8 +121,9 @@ Re-read the article once as an editor against your notes: every number, date, pr
 
 - Commit with message `Blog: <title>`, a blank line, then the Co-Authored-By and Claude-Session trailers.
   Use `git -c user.name="Matt Riedl" -c user.email="mattriedl@users.noreply.github.com"`. Push to `main`
-  (never a pull request). Pushing deploys the Cloudflare preview within a minute.
-- Verify it is live: `https://nevada-information.mattriedl.workers.dev/blog/<slug>/` returns 200 with the new title.
-  Once nevadainformation.com is live, check there too and submit the article URL, `/blog/` and linked city pages
-  with OpenSEO `submit_indexnow_urls`.
+  (never a pull request). Pushing deploys https://nevadainformation.com through Cloudflare Workers Builds within a minute or two.
+- Verify it is live: `https://nevadainformation.com/blog/<slug>/` returns 200 with the new title (add `?v=<timestamp>`
+  to skip caches), and `https://nevadainformation.com/sitemap.xml` lists it.
+- Submit the article URL, `https://nevadainformation.com/blog/`, `https://nevadainformation.com/` and the city pages it
+  links to with OpenSEO `submit_indexnow_urls` (free; the key file `60953573236b4171a9f01357b86ed4ba.txt` is in `public/`).
 - Never push an article that fails the checks. If you can't finish, leave it unpushed and report why.

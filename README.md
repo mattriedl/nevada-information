@@ -33,7 +33,8 @@ on changes to the fetch/assemble scripts, or by hand from the Actions tab, then 
 
 ## Hosting
 
-- **Cloudflare Pages:** no build command, output directory `public`.
+- **Cloudflare (live):** Workers Builds deploys every push to `main` using `wrangler.jsonc`: the static site in `public/`
+  served on nevadainformation.com, with `worker/index.js` sending www, http and non-slash URLs to the canonical address.
 - **Apache (VPS):** point the document root at `public/` (or rsync it to `public_html`). `public/.htaccess` handles
   https/www redirects and caching.
 
@@ -41,4 +42,4 @@ on changes to the fetch/assemble scripts, or by hand from the Actions tab, then 
 
 - Create a GA4 property and set `ANALYTICS_ID` in `build/generate_site.py`.
 - Set up email for `contact@nevadainformation.com`.
-- Submit the sitemap to Search Console and Bing; IndexNow key file is `public/60953573236b4171a9f01357b86ed4ba.txt`.
+- Submit the sitemap to Google Search Console (all pages were sent to IndexNow at launch); IndexNow key file is `public/60953573236b4171a9f01357b86ed4ba.txt`.
