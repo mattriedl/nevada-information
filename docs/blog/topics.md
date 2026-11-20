@@ -14,6 +14,7 @@ guide can win. Re-check metrics and the live SERP before writing (WRITING-GUIDE.
 | 2026-11-16 | new-years-eve-las-vegas | new years eve las vegas (4,400 / 12); also targets las vegas new years eve events (1,900 / 13), las vegas new years eve concerts (720 / 0), las vegas strip new years eve (390 / 2), las vegas hotel new years eve (390 / 7), las vegas new years eve weather (320 / 2), las vegas new years eve dinner (210 / 0), las vegas new years eve parties (170 / 6), las vegas new years eve road closures (70 / 16) |
 | 2026-11-16 | las-vegas-in-december | las vegas in december (1,600 / 0); also targets las vegas nevada weather in december (12,100 / 0), las vegas concerts in december (1,900 / 7), las vegas december events (720 / 8), las vegas activities in december (720 / 0), things to do in december in las vegas (480 / 0), what to wear to las vegas in december (320 / 0), rodeo in las vegas in december (320 / 14), are las vegas pools open in december (90 / 0) |
 | 2026-11-19 | new-years-eve-reno | new year's eve in reno / reno new years eve (480 / 0); also targets lake tahoe new years eve (590 / 0), new years in reno (480 / 0), south lake tahoe new years eve (210 / 16), reno nv new years eve events (170 / 0), new years eve party reno (30 / 0), downtown reno new years eve (10), new years eve dinner reno (10 / 0) |
+| 2026-11-19 | nevada-ski-resorts | nevada ski resorts (1,600 / 16); also targets skiing in nevada (1,600 / 7), ski resorts in nevada (1,600 / 26), ski resorts near las vegas (1,300 / 5), skiing near las vegas (1,300 / 12), lee canyon lift tickets (1,300 / 4), mt rose lift tickets (1,000 / 17), sky tavern (1,000 / 0), ski resorts near reno (720 / 29), diamond peak lift tickets (480 / 8) |
 
 ## Backlog (top = next; seasonal items first while their window is open)
 
@@ -43,7 +44,7 @@ guide can win. Re-check metrics and the live SERP before writing (WRITING-GUIDE.
 - Enchant Las Vegas: enchant las vegas (14,800 / 30), enchant christmas las vegas (2,900 / 31); christmas-in-las-vegas covers it briefly; las vegas christmas events (1,300 / 14), las vegas christmas market (320 / 22)
 - Lake Mead hot springs by kayak / Black Canyon water trail: arizona hot springs (4,400 / 2), gold strike hot springs (1,900 / 12); Steamboat Hot Springs Reno spa guide: steamboat hot springs (4,400 / 40, mixed with Colorado intent)
 - Remote Nevada hot springs road trip: bog hot springs nevada (480 / 0), ruby valley hot springs nevada (320 / 0), kyle hot springs nevada (260 / 0), alkali hot springs nevada (260 / 0), caliente hot springs nevada (210 / 0)
-- Lake Tahoe skiing from Reno (skiing near reno, mt rose, diamond peak)
+- Resort deep-dives (nevada-ski-resorts covers the overview): lee canyon (40,500 / 9), mt rose ski resort (49,500 / 16), diamond peak ski resort (22,200 / 11), skiing in las vegas (480 / 12); Lake Tahoe winter guide: lake tahoe winter (6,600 / 0), winter storm warning lake tahoe (6,600 / 2)
 - Reno winter weather guide for movers: does it snow in reno (1,300 / 1); christmas-in-reno already covers December weather and ice skating
 - Extraterrestrial Highway and Area 51 road trip; US 50 "Loneliest Road" trip
 - Nevada vs California taxes; Nevada DMV for new residents; Henderson vs Summerlin
